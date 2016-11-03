@@ -12,6 +12,14 @@ var client = http.request(options, function (response) {
     response.on('data', function (data) {
         console.log(data.toString());
     });
+
 });
-//当调用end 方法的时候才会在真正想服务器发送请求
+/*
+client.write('request1','utf8');
+client.write('request2','utf8');
+*/
+
+
+
+//当调用end 方法的时候才会在真正想服务器发送请求,结束写入响应体
 client.end();
